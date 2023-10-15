@@ -37,11 +37,13 @@
     "lib/**/*"
   ],
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   },
   "publishConfig": {
     "access": "public"
- },
+  },
   "author": "wzh",
   "license": "ISC",
   "bugs": {
@@ -50,8 +52,10 @@
   "homepage": "https://github.com/wangzehua301/npm_build#readme",
   "devDependencies": {
     "@types/chai": "^4.3.8",
+    "@types/jest": "^29.5.5",
     "@types/mocha": "^10.0.2",
     "chai": "^4.3.10",
+    "jest": "^29.7.0",
     "mocha": "^10.2.0",
     "semantic-release": "^22.0.5",
     "ts-node": "^10.9.1",
