@@ -1,0 +1,60 @@
+{
+  "name": "@zehuawang/npm_build",
+  "version": "0.0.0-development",
+  "description": "create a better npm project",
+  "types": "./lib/cjs/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "scripts": {
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "prepack": "npm run build",
+    "test": "mocha",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangzehua301/npm_build.git"
+  },
+  "keywords": [
+    "build",
+    "ts"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/types/index.d.ts",
+        "default": "./lib/esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/cjs/types/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "release": {
+    "branches": ["main"]
+  },
+  "publishConfig": {
+    "access": "public"
+ },
+  "author": "wzh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangzehua301/npm_build/issues"
+  },
+  "homepage": "https://github.com/wangzehua301/npm_build#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.8",
+    "@types/mocha": "^10.0.2",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "semantic-release": "^22.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
