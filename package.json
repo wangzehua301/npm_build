@@ -1,6 +1,6 @@
 {
   "name": "@zehuawang/npm_build",
-  "version": "0.0.0-development",
+  "version": "1.0.2",
   "description": "create a better npm project",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
