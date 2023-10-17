@@ -51,6 +51,11 @@
   },
   "homepage": "https://github.com/wangzehua301/npm_build#readme",
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.1",
+    "@semantic-release/npm": "^11.0.0",
+    "@semantic-release/release-notes-generator": "^12.0.0",
     "@types/chai": "^4.3.8",
     "@types/jest": "^29.5.5",
     "@types/mocha": "^10.0.2",
