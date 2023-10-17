@@ -2,7 +2,7 @@ name: Release
 on:
   workflow_run:
     # workflows: ['Snyk Security Check', 'Tests']
-    workflows: ['Tests']
+    workflows: ['Snyk Security Check']
     branches: [main]
     types:
       - completed
@@ -24,6 +24,6 @@ jobs:
         run: npm ci
       - name: Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
