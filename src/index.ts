@@ -4,7 +4,7 @@ export function helloWorld() {
   }
   
   export function goodBye() {
-    const message = 'Goodbye,wzh';
+    const message = 'Goodbye,xt';
     return message;
   }
   
