@@ -36,11 +36,6 @@
   "files": [
     "lib/**/*"
   ],
-  "release": {
-    "branches": [
-      "main"
-    ]
-  },
   "publishConfig": {
     "access": "public"
   },
